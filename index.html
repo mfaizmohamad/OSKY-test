@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>OSKY-WEB-DEV-TEST</title>
+
+</head>
+<body>
+  <!-- SOCIAL ICON NAVBAR -->
+  <div class="social">
+    <i class="fab fa-youtube youtube-icon" onclick="confirmNavigation('https://www.youtube.com')"></i>
+    <i class="fab fa-twitter twitter-icon" onclick="confirmNavigation('https://twitter.com')"></i>
+    <i class="fab fa-linkedin-in linkedin-icon" onclick="confirmNavigation('https://www.linkedin.com')"></i>
+    <a href="">Logout</a>
+    <a href="">My Dashboard</a>   
+    <div class="burger-icon" onclick="toggleNavbar()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+
+  <!-- MAIN NAVBAR -->
+
+  <header class="navbar_container" id="navbarContainer">
+    <img src="./logo.png" alt="logo" height="50" width="100">
+    <div>Products</div>
+    <div>Safety Tools</div>
+    <div>Training</div>
+    <div>Engagement</div>
+    <div id="navActive" onclick="myFunction()">Membership</div>
+    <div>News</div>
+    <div>About</div>
+  </header>
+  
+  <!-- SUB MENU -->
+  <div class="subMenu_container" id="subMenu">
+    <a href="#latestNews">Latest News</a>
+    <a href="#Subscribe">Subscribe to Newsletter</a>
+    <a href="#videos">Videos</a>
+    <a href="#Publication" class="no_border">Publication</a>
+    <i class="fas fa-window-close close-icon" onclick="closeSubMenu()"></i>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

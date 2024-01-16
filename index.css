@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Fauna+One&family=Montserrat:wght@100;400;500&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #00AEEF;
+  font-family:'Montserrat', sans-serif;
+}
+
+/*========== SOCIAL ICON ===========*/
+
+.social {
+  background-color: #fff;
+  display: flex;
+  justify-content: end;
+  padding-right: 16rem;
+  padding-top: 2rem;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.social > i {
+  color: #00AEEF;
+}
+
+.social > a {
+  color: #00AEEF;
+  text-decoration: none;
+}
+
+/*======== NAVBAR ==========*/
+
+.navbar_container {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  padding: 0 15rem;
+}
+
+.navbar_container > div {
+  color: black;
+ height: 4rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+}
+
+/* =========== SUBMENU ===========*/
+
+.subMenu_container {
+  background-color: #fff;
+  width: 35rem;
+  margin-left: 35rem;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex: 1fr 1fr 1fr 1fr;
+  position: relative; 
+}
+
+.subMenu_container > a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  padding: 1rem;
+}
+
+#subMenu {
+  display: none;
+}
+
+.subMenu_container > a:nth-child(1),
+.subMenu_container > a:nth-child(2),
+.subMenu_container > a:nth-child(3) {
+  border-right: 1px solid black;
+}
+
+.close-icon {
+  color: #000; 
+  font-size: 18px; 
+  cursor: pointer; 
+  position: absolute; 
+  bottom: 0rem; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+.burger-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 1150px){
+  .navbar_container {
+    padding: 0 5rem;
+  }
+
+  .social {
+    padding-right: 8rem;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .navbar_container {
+    padding: 0 1rem;
+  }
+
+  .social {
+    padding-right: 4rem;
+  }
+}
+
+@media only screen and (max-width: 700px){
+    .navbar_container {
+      display: none;
+      flex-direction: column; 
+      position: absolute;
+      padding-left: 0;
+      top: 4.2rem; 
+      left: 0;
+      background-color: #fff;
+      width: 100%; 
+    }
+
+    .navbar_container > img {
+      display: none;
+    }
+
+    .navbar_container > div{
+      padding: 0 30rem ;
+      cursor: pointer;
+    }
+
+    .navbar_container > div:hover {
+     background-color: #00AEEF;
+    }
+
+
+    .navbar_container.show {
+      display: flex; 
+    }
+
+    .burger-icon {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .social {
+      padding-right: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .subMenu_container {
+        background-color: #fff;
+        width: 32rem;
+        top: 21rem;
+        margin-left: 0;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        flex: 1fr 1fr ;
+        position: relative; 
+      }
+      
+      .close-icon {
+        position: absolute; 
+        bottom: -2rem; 
+        left: 50%; 
+        transform: translateX(-50%); 
+      }
+    
+}
